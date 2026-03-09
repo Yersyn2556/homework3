@@ -1,12 +1,13 @@
-/* style.css - styles for Homework One */
+/* =======================
+   Homework Two: Advanced Selectors
+   ======================= */
 
 /* 1. body */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
-  background-color: #fdfefe;
 }
 
 /* 2. header */
@@ -17,27 +18,20 @@ header {
 
 /* 3. nav */
 nav {
+  display: inline-block;
+  width: 80%;
   background-color: #5dade2;
   padding: 10px;
 }
 
-/* убираем точки у списка */
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* 6. li */
-li {
-  display: inline-block;
-  width: 100px;
-  text-align: center;
+/* nav image */
+nav img {
+  width: 10%;
 }
 
 /* 4. main */
 main {
-  background-color: #ffffff;
+  background-color: #fdfefe;
   font-size: 16px;
   padding: 20px;
 }
@@ -49,14 +43,62 @@ footer {
   text-align: center;
 }
 
+/* 6. li - закомментировано */
+/* li {
+  display: inline-block;
+  width: 100px;
+  margin-right: 10px;
+} */
+
 /* 7. h1 */
 h1 {
   text-align: center;
-  font-family: Georgia, "Times New Roman", serif;
-  color: #1b2631;
+  color: darkblue;
+  font-family: Georgia, serif;
 }
 
 /* 8. p */
 p {
-  line-height: 1.6;
+  line-height: 1.5;
+}
+
+/* 9. Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: center;
+  align-items: start;
+  row-gap: 20px;
+}
+
+.grid img {
+  width: 100%;
+}
+
+/* 10. Flex layout */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex img {
+  width: auto;
+}
+
+/* 11. Skip link style */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+  left: 0;
 }
